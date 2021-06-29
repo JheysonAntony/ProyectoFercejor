@@ -45,10 +45,12 @@ namespace ProyectFercejor
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -79,7 +81,7 @@ namespace ProyectFercejor
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(166, 45);
+            this.textNombre.Location = new System.Drawing.Point(166, 81);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(112, 20);
             this.textNombre.TabIndex = 2;
@@ -89,7 +91,7 @@ namespace ProyectFercejor
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 52);
+            this.label1.Location = new System.Drawing.Point(33, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 3;
@@ -100,7 +102,7 @@ namespace ProyectFercejor
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 78);
+            this.label2.Location = new System.Drawing.Point(33, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 16);
             this.label2.TabIndex = 4;
@@ -111,7 +113,7 @@ namespace ProyectFercejor
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(32, 104);
+            this.label3.Location = new System.Drawing.Point(33, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 5;
@@ -122,7 +124,7 @@ namespace ProyectFercejor
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(31, 131);
+            this.label4.Location = new System.Drawing.Point(33, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 6;
@@ -130,24 +132,24 @@ namespace ProyectFercejor
             // 
             // textPrecio
             // 
-            this.textPrecio.Location = new System.Drawing.Point(166, 71);
+            this.textPrecio.Location = new System.Drawing.Point(166, 110);
             this.textPrecio.Name = "textPrecio";
             this.textPrecio.Size = new System.Drawing.Size(112, 20);
             this.textPrecio.TabIndex = 7;
             // 
             // textCantidad
             // 
-            this.textCantidad.Location = new System.Drawing.Point(166, 97);
+            this.textCantidad.Location = new System.Drawing.Point(166, 144);
             this.textCantidad.Name = "textCantidad";
             this.textCantidad.Size = new System.Drawing.Size(112, 20);
             this.textCantidad.TabIndex = 8;
             // 
             // textDescripcion
             // 
-            this.textDescripcion.Location = new System.Drawing.Point(166, 128);
+            this.textDescripcion.Location = new System.Drawing.Point(166, 178);
             this.textDescripcion.Multiline = true;
             this.textDescripcion.Name = "textDescripcion";
-            this.textDescripcion.Size = new System.Drawing.Size(112, 96);
+            this.textDescripcion.Size = new System.Drawing.Size(112, 61);
             this.textDescripcion.TabIndex = 9;
             // 
             // label5
@@ -198,6 +200,7 @@ namespace ProyectFercejor
             this.btnActualizar.TabIndex = 14;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnBuscar
             // 
@@ -210,6 +213,7 @@ namespace ProyectFercejor
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEliminar
             // 
@@ -222,15 +226,7 @@ namespace ProyectFercejor
             this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 241);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(571, 197);
-            this.dataGridView1.TabIndex = 17;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // pictureBox1
             // 
@@ -241,12 +237,46 @@ namespace ProyectFercejor
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 245);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(571, 196);
+            this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(33, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 16);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Codigo";
+            // 
+            // textCodigo
+            // 
+            this.textCodigo.Location = new System.Drawing.Point(166, 55);
+            this.textCodigo.Name = "textCodigo";
+            this.textCodigo.Size = new System.Drawing.Size(112, 20);
+            this.textCodigo.TabIndex = 19;
+            // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(595, 453);
+            this.Controls.Add(this.textCodigo);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
@@ -267,8 +297,9 @@ namespace ProyectFercejor
             this.Controls.Add(this.btnVolver);
             this.Name = "FormProductos";
             this.Text = "FormProductos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +325,7 @@ namespace ProyectFercejor
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textCodigo;
     }
 }
