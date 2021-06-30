@@ -157,9 +157,9 @@ namespace ProyectFercejor
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(31, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
+            this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 27;
-            this.label3.Text = "RUC";
+            this.label3.Text = "Codigo Cliente";
             // 
             // label2
             // 
@@ -168,9 +168,9 @@ namespace ProyectFercejor
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(31, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 26;
-            this.label2.Text = "Nro. Pedido";
+            this.label2.Text = "Codigo Pedido";
             // 
             // label4
             // 

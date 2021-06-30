@@ -18,7 +18,7 @@ namespace ProyectFercejor
             InitializeComponent();
         }
 
-        SqlConnection conexion = new SqlConnection(@"Data Source = JHEYSON\SQLEXPRESS; Initial Catalog = LoginProyecto; Integrated Security = True");
+        SqlConnection conexion = new SqlConnection(@"Data Source = JHEYSON\SQLEXPRESS; Initial Catalog = Fercejor2021; Integrated Security = True");
 
         public void logear(string usuario, string contraseña)
         {

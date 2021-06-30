@@ -40,10 +40,12 @@ namespace ProyectFercejor
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textRuc = new System.Windows.Forms.TextBox();
+            this.textRaznSoc = new System.Windows.Forms.TextBox();
+            this.textDirec = new System.Windows.Forms.TextBox();
+            this.textTelefono = new System.Windows.Forms.TextBox();
+            this.textCodigoCliente = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +84,7 @@ namespace ProyectFercejor
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnBuscar
             // 
@@ -93,6 +96,7 @@ namespace ProyectFercejor
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnActualizar
             // 
@@ -104,6 +108,7 @@ namespace ProyectFercejor
             this.btnActualizar.TabIndex = 4;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -115,6 +120,7 @@ namespace ProyectFercejor
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label1
             // 
@@ -132,7 +138,7 @@ namespace ProyectFercejor
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(37, 85);
+            this.label2.Location = new System.Drawing.Point(36, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 16);
             this.label2.TabIndex = 7;
@@ -143,7 +149,7 @@ namespace ProyectFercejor
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(37, 124);
+            this.label3.Location = new System.Drawing.Point(36, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 16);
             this.label3.TabIndex = 8;
@@ -154,7 +160,7 @@ namespace ProyectFercejor
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(37, 159);
+            this.label4.Location = new System.Drawing.Point(36, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 16);
             this.label4.TabIndex = 9;
@@ -165,43 +171,62 @@ namespace ProyectFercejor
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(37, 199);
+            this.label5.Location = new System.Drawing.Point(36, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Teléfono";
             // 
-            // textBox1
+            // textRuc
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 82);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 30);
-            this.textBox1.TabIndex = 11;
+            this.textRuc.Location = new System.Drawing.Point(130, 106);
+            this.textRuc.Multiline = true;
+            this.textRuc.Name = "textRuc";
+            this.textRuc.Size = new System.Drawing.Size(147, 30);
+            this.textRuc.TabIndex = 11;
             // 
-            // textBox2
+            // textRaznSoc
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 118);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 32);
-            this.textBox2.TabIndex = 12;
+            this.textRaznSoc.Location = new System.Drawing.Point(130, 142);
+            this.textRaznSoc.Multiline = true;
+            this.textRaznSoc.Name = "textRaznSoc";
+            this.textRaznSoc.Size = new System.Drawing.Size(147, 32);
+            this.textRaznSoc.TabIndex = 12;
             // 
-            // textBox3
+            // textDirec
             // 
-            this.textBox3.Location = new System.Drawing.Point(131, 155);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 32);
-            this.textBox3.TabIndex = 13;
+            this.textDirec.Location = new System.Drawing.Point(130, 179);
+            this.textDirec.Multiline = true;
+            this.textDirec.Name = "textDirec";
+            this.textDirec.Size = new System.Drawing.Size(147, 32);
+            this.textDirec.TabIndex = 13;
             // 
-            // textBox4
+            // textTelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(131, 193);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(147, 32);
-            this.textBox4.TabIndex = 14;
+            this.textTelefono.Location = new System.Drawing.Point(130, 217);
+            this.textTelefono.Multiline = true;
+            this.textTelefono.Name = "textTelefono";
+            this.textTelefono.Size = new System.Drawing.Size(147, 32);
+            this.textTelefono.TabIndex = 14;
+            // 
+            // textCodigoCliente
+            // 
+            this.textCodigoCliente.Location = new System.Drawing.Point(130, 70);
+            this.textCodigoCliente.Multiline = true;
+            this.textCodigoCliente.Name = "textCodigoCliente";
+            this.textCodigoCliente.Size = new System.Drawing.Size(147, 30);
+            this.textCodigoCliente.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(36, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Codigo Cliente";
             // 
             // dataGridView1
             // 
@@ -209,8 +234,11 @@ namespace ProyectFercejor
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 255);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(571, 186);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(571, 196);
+            this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // FormClientes
             // 
@@ -219,10 +247,12 @@ namespace ProyectFercejor
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(595, 453);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textCodigoCliente);
+            this.Controls.Add(this.textTelefono);
+            this.Controls.Add(this.textDirec);
+            this.Controls.Add(this.textRaznSoc);
+            this.Controls.Add(this.textRuc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -238,7 +268,8 @@ namespace ProyectFercejor
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormClientes";
-            this.Text = "Clientes";
+            this.Text = "FormClientes";
+            this.Load += new System.EventHandler(this.FormClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -258,10 +289,12 @@ namespace ProyectFercejor
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textRuc;
+        private System.Windows.Forms.TextBox textRaznSoc;
+        private System.Windows.Forms.TextBox textDirec;
+        private System.Windows.Forms.TextBox textTelefono;
+        private System.Windows.Forms.TextBox textCodigoCliente;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

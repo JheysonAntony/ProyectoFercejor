@@ -258,9 +258,9 @@ namespace ProyectFercejor
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(33, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 16);
+            this.label6.Size = new System.Drawing.Size(87, 16);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Codigo";
+            this.label6.Text = "Codigo Producto";
             // 
             // textCodigo
             // 
