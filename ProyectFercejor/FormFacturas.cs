@@ -102,17 +102,16 @@ namespace ProyectFercejor
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             conx.Open();
-            //int tipClien ;
-            //if (cboTipoCliente.SelectedItem.Equals("Natural"))
-            //{
-            //    tipClien = 1;
-            //}
-            //else
-            //{
-            //    tipClien = 2;
-            //}
-            //Console.WriteLine(tipClien);
-            string consulta = "update Factura set IdFactura=" + textCodigoFact.Text + ",IdPedido=" + textCodigoPedido.Text + " ,IdCliente=" + textCodigoCliente.Text + ", IdTipoCliente=" + cboTipoCliente.Text + ", Monto=" + textMonto.Text + "where IdFactura='" + textCodigoFact.Text + "'";
+            int tipClien;
+            if (cboTipoCliente.SelectedItem.Equals("Natural"))
+            {
+                tipClien = 1;
+            }
+            else
+            {
+                tipClien = 2;
+            }
+            string consulta = "update Factura set IdFactura=" + textCodigoFact.Text + ",IdPedido=" + textCodigoPedido.Text + " ,IdCliente=" + textCodigoCliente.Text + ", IdTipoCliente=" + tipClien + ", Monto=" + textMonto.Text + "where IdFactura='" + textCodigoFact.Text + "'";
             SqlCommand comando = new SqlCommand(consulta, conx);
             int cant;
             cant = comando.ExecuteNonQuery();
