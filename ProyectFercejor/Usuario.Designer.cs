@@ -31,6 +31,8 @@ namespace ProyectFercejor
         {
             this.lblmensaje = new System.Windows.Forms.Label();
             this.lbltipoUsuario = new System.Windows.Forms.Label();
+            this.textFechita = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblmensaje
@@ -50,15 +52,35 @@ namespace ProyectFercejor
             this.lbltipoUsuario.TabIndex = 1;
             this.lbltipoUsuario.Text = "Usuario";
             // 
+            // textFechita
+            // 
+            this.textFechita.Location = new System.Drawing.Point(125, 95);
+            this.textFechita.Name = "textFechita";
+            this.textFechita.Size = new System.Drawing.Size(149, 20);
+            this.textFechita.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(364, 147);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textFechita);
             this.Controls.Add(this.lbltipoUsuario);
             this.Controls.Add(this.lblmensaje);
             this.Name = "Usuario";
             this.Text = "Usuario";
+            this.Load += new System.EventHandler(this.Usuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,5 +90,7 @@ namespace ProyectFercejor
 
         private System.Windows.Forms.Label lblmensaje;
         private System.Windows.Forms.Label lbltipoUsuario;
+        private System.Windows.Forms.TextBox textFechita;
+        private System.Windows.Forms.Button button1;
     }
 }

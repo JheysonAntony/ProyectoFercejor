@@ -36,18 +36,18 @@ namespace ProyectFercejor
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textCodigoPedido = new System.Windows.Forms.TextBox();
+            this.textCodigoCliente = new System.Windows.Forms.TextBox();
+            this.textMonto = new System.Windows.Forms.TextBox();
+            this.textFecha = new System.Windows.Forms.TextBox();
+            this.cboTipoCliente = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textCodigoFact = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,7 @@ namespace ProyectFercejor
             this.btnEliminar.TabIndex = 15;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -88,6 +89,7 @@ namespace ProyectFercejor
             this.btnActualizar.TabIndex = 14;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnBuscar
             // 
@@ -101,6 +103,7 @@ namespace ProyectFercejor
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnAgregar
             // 
@@ -114,6 +117,7 @@ namespace ProyectFercejor
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnCerrar
             // 
@@ -141,42 +145,46 @@ namespace ProyectFercejor
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // textBox1
+            // textCodigoPedido
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 16;
+            this.textCodigoPedido.Location = new System.Drawing.Point(120, 108);
+            this.textCodigoPedido.Name = "textCodigoPedido";
+            this.textCodigoPedido.Size = new System.Drawing.Size(121, 20);
+            this.textCodigoPedido.TabIndex = 16;
             // 
-            // textBox2
+            // textCodigoCliente
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 134);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 17;
+            this.textCodigoCliente.Location = new System.Drawing.Point(120, 134);
+            this.textCodigoCliente.Name = "textCodigoCliente";
+            this.textCodigoCliente.Size = new System.Drawing.Size(121, 20);
+            this.textCodigoCliente.TabIndex = 17;
             // 
-            // textBox3
+            // textMonto
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 187);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 18;
+            this.textMonto.Location = new System.Drawing.Point(120, 187);
+            this.textMonto.Name = "textMonto";
+            this.textMonto.Size = new System.Drawing.Size(121, 20);
+            this.textMonto.TabIndex = 18;
             // 
-            // textBox4
+            // textFecha
             // 
-            this.textBox4.Location = new System.Drawing.Point(120, 217);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 20);
-            this.textBox4.TabIndex = 19;
+            this.textFecha.Enabled = false;
+            this.textFecha.Location = new System.Drawing.Point(120, 217);
+            this.textFecha.Name = "textFecha";
+            this.textFecha.Size = new System.Drawing.Size(79, 20);
+            this.textFecha.TabIndex = 19;
             // 
-            // comboBox1
+            // cboTipoCliente
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Silver;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(120, 160);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 20;
+            this.cboTipoCliente.BackColor = System.Drawing.Color.Silver;
+            this.cboTipoCliente.FormattingEnabled = true;
+            this.cboTipoCliente.Items.AddRange(new object[] {
+            "Natural",
+            "Juridico"});
+            this.cboTipoCliente.Location = new System.Drawing.Point(120, 160);
+            this.cboTipoCliente.Name = "cboTipoCliente";
+            this.cboTipoCliente.Size = new System.Drawing.Size(121, 21);
+            this.cboTipoCliente.TabIndex = 20;
             // 
             // label2
             // 
@@ -239,15 +247,18 @@ namespace ProyectFercejor
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(11, 254);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(571, 187);
             this.dataGridView1.TabIndex = 26;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // textBox5
+            // textCodigoFact
             // 
-            this.textBox5.Location = new System.Drawing.Point(120, 82);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 20);
-            this.textBox5.TabIndex = 27;
+            this.textCodigoFact.Location = new System.Drawing.Point(120, 82);
+            this.textCodigoFact.Name = "textCodigoFact";
+            this.textCodigoFact.Size = new System.Drawing.Size(121, 20);
+            this.textCodigoFact.TabIndex = 27;
             // 
             // label7
             // 
@@ -267,18 +278,18 @@ namespace ProyectFercejor
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(595, 453);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textCodigoFact);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboTipoCliente);
+            this.Controls.Add(this.textFecha);
+            this.Controls.Add(this.textMonto);
+            this.Controls.Add(this.textCodigoCliente);
+            this.Controls.Add(this.textCodigoPedido);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnBuscar);
@@ -288,6 +299,7 @@ namespace ProyectFercejor
             this.Controls.Add(this.label1);
             this.Name = "FormFacturas";
             this.Text = "FormFacturas";
+            this.Load += new System.EventHandler(this.FormFacturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -303,18 +315,18 @@ namespace ProyectFercejor
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textCodigoPedido;
+        private System.Windows.Forms.TextBox textCodigoCliente;
+        private System.Windows.Forms.TextBox textMonto;
+        private System.Windows.Forms.TextBox textFecha;
+        private System.Windows.Forms.ComboBox cboTipoCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textCodigoFact;
         private System.Windows.Forms.Label label7;
     }
 }
