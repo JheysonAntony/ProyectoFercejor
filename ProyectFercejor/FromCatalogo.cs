@@ -46,18 +46,17 @@ namespace ProyectFercejor
 
         private void btnReportFactura_Click(object sender, EventArgs e)
         {
-            if (conx.State == ConnectionState.Closed)
-                conx.Open();
-            SqlDataAdapter sqlDa = new SqlDataAdapter("usp_lista_facturas_cliente", conx);
-            sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
-            sqlDa.SelectCommand.Parameters.AddWithValue("@IdCliente", 1);
-            DataTable dtb1 = new DataTable();
-            sqlDa.Fill(dtb1);
-            conx.Close();
+            
             ProyectFercejor.CrystalReport1 crpFacturas = new CrystalReport1();
-            crpFacturas.Database.Tables[""].SetDataSource(dtb1);
+            crpFacturas.SetParameterValue("@IdCliente", textFactCliente.Text);
             crystalReportViewer1.ReportSource = null;
             crystalReportViewer1.ReportSource = crpFacturas;
+        }
+
+        private void btnReportFecha_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(dtFecha.Text);
+            Console.ReadLine();
         }
     }
 }
