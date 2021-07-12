@@ -29,6 +29,7 @@ namespace ProyectFercejor
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.lblmensajeAdmin = new System.Windows.Forms.Label();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -127,16 +128,14 @@ namespace ProyectFercejor
             // 
             // btnCatalogo
             // 
-            this.btnCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCatalogo.BackColor = System.Drawing.Color.Silver;
             this.btnCatalogo.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCatalogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCatalogo.Image = global::ProyectFercejor.Properties.Resources.catalogo__1_;
+            this.btnCatalogo.ForeColor = System.Drawing.Color.White;
             this.btnCatalogo.Location = new System.Drawing.Point(43, 78);
             this.btnCatalogo.Name = "btnCatalogo";
             this.btnCatalogo.Size = new System.Drawing.Size(145, 145);
             this.btnCatalogo.TabIndex = 2;
-            this.btnCatalogo.Text = "Cátalogo";
-            this.btnCatalogo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCatalogo.Text = "Reportes";
             this.btnCatalogo.UseVisualStyleBackColor = false;
             this.btnCatalogo.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -155,6 +154,7 @@ namespace ProyectFercejor
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.lblmensajeAdmin);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenu";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);

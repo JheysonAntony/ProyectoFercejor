@@ -112,7 +112,7 @@ namespace ProyectFercejor
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             conx.Open();
-            int tipTranspor = 0;
+            int tipTranspor ;
             if (cboTransporte.SelectedItem.Equals("Aereo"))
             {
                 tipTranspor = 1;
@@ -125,7 +125,7 @@ namespace ProyectFercejor
             {
                 tipTranspor = 3;
             }
-            int tipEstado = 0;
+            int tipEstado ;
             if (cboEstado.SelectedItem.Equals("Pendiente"))
             {
                 tipEstado = 1;
@@ -134,7 +134,7 @@ namespace ProyectFercejor
             {
                 tipEstado = 2;
             }
-            string consulta = "update Envio set IdPedido=" + textCodigoPedido.Text + " ,IdCliente=" + textCodigoCliente.Text + ", Destino='" + textDestino + "', IdTipoTransporte=" + tipTranspor + ", IdTipoEstado=" + tipEstado + "where IdPedido='" + textCodigoPedido.Text + "'";
+            string consulta = "update Envio set IdPedido=" + textCodigoPedido.Text + " ,IdCliente=" + textCodigoCliente.Text + ", Destino='" + textDestino.Text + "', IdTipoTransporte=" + tipTranspor + ", IdTipoEstado=" + tipEstado + "where IdPedido='" + textCodigoPedido.Text + "'";
             SqlCommand comando = new SqlCommand(consulta, conx);
             int cant;
             cant = comando.ExecuteNonQuery();
