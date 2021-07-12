@@ -55,7 +55,8 @@ namespace ProyectFercejor
 
         private void btnReportFecha_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(dtFecha.Text);
+           
+            Console.WriteLine(dtFecha.Value.ToString("yyyy-MM-dd"));
             Console.ReadLine();
         }
     }
