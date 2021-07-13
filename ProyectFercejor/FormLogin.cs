@@ -43,7 +43,7 @@ namespace ProyectFercejor
                     }
                     else if (dt.Rows[0][1].ToString() == "Usuario")
                     {
-                        new Usuario(dt.Rows[0][0].ToString()).Show();
+                        new FormReporte(dt.Rows[0][0].ToString()).Show();
                     }
                     
                 }

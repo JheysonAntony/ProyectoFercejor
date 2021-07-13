@@ -32,7 +32,6 @@ namespace ProyectFercejor
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCatalogo));
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.btnReportFecha = new System.Windows.Forms.Button();
             this.btnReportProductos = new System.Windows.Forms.Button();
             this.btnReportPedidos = new System.Windows.Forms.Button();
@@ -43,9 +42,10 @@ namespace ProyectFercejor
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textPedidosCliente = new System.Windows.Forms.TextBox();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -72,19 +72,6 @@ namespace ProyectFercejor
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.DisplayStatusBar = false;
-            this.crystalReportViewer1.DisplayToolbar = false;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(-2, 41);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(509, 400);
-            this.crystalReportViewer1.TabIndex = 2;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            // 
             // btnReportFecha
             // 
             this.btnReportFecha.BackColor = System.Drawing.Color.Silver;
@@ -105,6 +92,7 @@ namespace ProyectFercejor
             this.btnReportProductos.TabIndex = 33;
             this.btnReportProductos.Text = "Generar reporte";
             this.btnReportProductos.UseVisualStyleBackColor = false;
+            this.btnReportProductos.Click += new System.EventHandler(this.btnReportProductos_Click);
             // 
             // btnReportPedidos
             // 
@@ -115,6 +103,7 @@ namespace ProyectFercejor
             this.btnReportPedidos.TabIndex = 32;
             this.btnReportPedidos.Text = "Generar reporte";
             this.btnReportPedidos.UseVisualStyleBackColor = false;
+            this.btnReportPedidos.Click += new System.EventHandler(this.btnReportPedidos_Click_1);
             // 
             // btnReportFactura
             // 
@@ -181,12 +170,12 @@ namespace ProyectFercejor
             this.label2.TabIndex = 25;
             this.label2.Text = "Reportes de Lista de productos menores a \r\n";
             // 
-            // textBox1
+            // textPedidosCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(835, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 24;
+            this.textPedidosCliente.Location = new System.Drawing.Point(835, 64);
+            this.textPedidosCliente.Name = "textPedidosCliente";
+            this.textPedidosCliente.Size = new System.Drawing.Size(135, 20);
+            this.textPedidosCliente.TabIndex = 24;
             // 
             // dtFecha
             // 
@@ -205,12 +194,25 @@ namespace ProyectFercejor
             this.label1.TabIndex = 22;
             this.label1.Text = "Reportes de Lista de pedidos del cliente";
             // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.DisplayStatusBar = false;
+            this.crystalReportViewer1.DisplayToolbar = false;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(-2, 41);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(509, 400);
+            this.crystalReportViewer1.TabIndex = 2;
+            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
             // FrmCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1050, 592);
+            this.ClientSize = new System.Drawing.Size(1061, 469);
             this.Controls.Add(this.btnReportFecha);
             this.Controls.Add(this.btnReportProductos);
             this.Controls.Add(this.btnReportPedidos);
@@ -221,7 +223,7 @@ namespace ProyectFercejor
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textPedidosCliente);
             this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.crystalReportViewer1);
@@ -240,7 +242,6 @@ namespace ProyectFercejor
 
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnCerrar;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Button btnReportFecha;
         private System.Windows.Forms.Button btnReportProductos;
         private System.Windows.Forms.Button btnReportPedidos;
@@ -251,8 +252,9 @@ namespace ProyectFercejor
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textPedidosCliente;
         private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.Label label1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

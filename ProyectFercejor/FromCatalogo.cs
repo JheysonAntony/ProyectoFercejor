@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProyectFercejor
 {
     public partial class FrmCatalogo : Form
@@ -55,9 +56,29 @@ namespace ProyectFercejor
 
         private void btnReportFecha_Click(object sender, EventArgs e)
         {
-           
-            Console.WriteLine(dtFecha.Value.ToString("yyyy-MM-dd"));
-            Console.ReadLine();
+            ProyectFercejor.CrystalReport4 crpFechas = new CrystalReport4();
+            crpFechas.SetParameterValue("@Fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
+            crystalReportViewer1.ReportSource = null;
+            crystalReportViewer1.ReportSource = crpFechas;
+
+            //Console.WriteLine(dtFecha.Value.ToString("yyyy-MM-dd"));
+            //Console.ReadLine();
+        }
+
+        private void btnReportPedidos_Click_1(object sender, EventArgs e)
+        {
+            ProyectFercejor.CrystalReport2 crpPedidos = new CrystalReport2();
+            crpPedidos.SetParameterValue("@IdCliente", textPedidosCliente.Text);
+            crystalReportViewer1.ReportSource = null;
+            crystalReportViewer1.ReportSource = crpPedidos;
+        }
+
+        private void btnReportProductos_Click(object sender, EventArgs e)
+        {
+            ProyectFercejor.CrystalReport3 crpProductos = new CrystalReport3();
+            crpProductos.SetParameterValue("@Stock", textBox2.Text);
+            crystalReportViewer1.ReportSource = null;   
+            crystalReportViewer1.ReportSource = crpProductos;
         }
     }
 }

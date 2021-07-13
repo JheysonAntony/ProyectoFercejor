@@ -36,3 +36,4 @@ C:\Users\ASUS\source\repos\ProyectFercejor\ProyectFercejor\bin\Debug\ShockwaveFl
 C:\Users\ASUS\source\repos\ProyectFercejor\ProyectFercejor\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\ASUS\source\repos\ProyectFercejor\ProyectFercejor\bin\Debug\stdole.dll
 C:\Users\ASUS\source\repos\ProyectFercejor\ProyectFercejor\obj\Debug\ProyectFercejor.csproj.CopyComplete
+C:\Users\ASUS\source\repos\ProyectFercejor\ProyectFercejor\obj\Debug\ProyectFercejor.FormReporte.resources
